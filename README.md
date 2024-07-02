@@ -63,6 +63,19 @@ CityGML 형식은 기본적으로 GIS 및 3D 도시 모델링을 위한 형식�
 본 문서에서는 名古屋市（2022年度）도시를 기준으로 진행합니다.
 
 ### Unity에 3D 모델링 임포트하기
+#### Only MacOS Issue
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/76d78a37-ff4c-4e96-8cfc-aa7b8076eb83)
+
+MacOS의 경우 해당 문구가 나올 수 있습니다.
+
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/75dda029-e188-4bb4-8625-1fc1f8e0b339)
+
+설정 - 개인 정보 보호 및 보안 - 보안 설정 - **"libplateau.dylib" 파일에 대한 허용**
+
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/d3ccc35b-2a81-49e4-a3d1-7b090c043125)
+
+정상 동작 확인하기
+
 #### 로컬 가져오기
 
 #### 서버 가져오기
