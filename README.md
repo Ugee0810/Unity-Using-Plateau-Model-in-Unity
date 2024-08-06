@@ -1,17 +1,20 @@
-## What is Plateau SDK for Unity ?
+## 📚What is Plateau SDK for Unity ?
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/56688021-69f7-4de3-81d4-d92ea551de01)<br>
 
 PLATEAU SDK는 일본의 3D 도시 모델 플랫폼인 PLATEAU의 데이터를 Unity 환경에서 사용할 수 있게 해주는 도구입니다. 이를 통해 개발자들은 현실감 있는 3D 도시 모델을 활용한 다양한 애플리케이션과 게임을 쉽게 제작할 수 있습니다.
 
 [Plateau SDK 사용 사례](https://www.mlit.go.jp/plateau/use-case/)
 
-### Plateau SDK Sample Proejcts
+### 📓Plateau SDK Sample Proejcts
 - [2024년 GIS 샘플](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity-GISSample) : 도시 정보를 보여주는 샘플입니다.
-![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/bccf57dc-a524-4871-9c71-0fab2d66f7f7)<br>
-- [2024년 게임 샘플](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity-GameSample) : 도시를 무대로 이동하는 게임 샘플입니다.
-![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/9823ddce-4671-416f-9d57-c3a540e2cf9d)<br>
 
-### 주요 기능
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/bccf57dc-a524-4871-9c71-0fab2d66f7f7)
+
+- [2024년 게임 샘플](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity-GameSample) : 도시를 무대로 이동하는 게임 샘플입니다.
+
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/9823ddce-4671-416f-9d57-c3a540e2cf9d)
+
+### 📓주요 기능
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/0c2e0fd1-9ca3-49b8-add1-8782631d6593)<br>
 
 - **3D 도시 모델 데이터 로드**<br>
@@ -25,7 +28,7 @@ Unity의 기능을 활용하여 3D 도시 모델을 사용자 요구에 맞게 �
 - **통합 및 확장성**<br>
 다른 시스템 및 API와의 통합이 용이하며, 확장 가능한 구조를 가지고 있습니다.
 
-#### CityGML 형식이란?
+### 📓CityGML 형식이란?
 CityGML 형식은 도시 및 지리 정보를 3차원으로 표현하기 위해 사용되는 XML 기반의 오픈 표준 형식입니다. Open Geospatial Consortium (OGC)에서 개발한 이 표준은 도시의 다양한 요소들을 모델링하고 시각화할 수 있도록 설계되었습니다. 이 형식은 건물, 교통 인프라, 토지 이용, 식생, 수역 등 도시 환경을 구성하는 다양한 객체들을 3D로 표현할 수 있게 해줍니다.
 
 주요 특징
@@ -40,7 +43,7 @@ CityGML 객체는 속성(예: 건물의 높이, 용도 등)과 다른 객체와�
 - **상호 운용성(Interoperability)**<br>
 다른 GIS 및 3D 시각화 소프트웨어와 호환성을 유지하며, 다양한 애플리케이션에서 도시 데이터를 효율적으로 활용할 수 있게 해줍니다.
 
-### CityGML 형식은 Plateau SDK외에도 Unity에서 일반적으로 사용가능한가요?
+### 📓CityGML 형식은 Plateau SDK외에도 Unity에서 일반적으로 사용가능한가요?
 CityGML 형식은 기본적으로 GIS 및 3D 도시 모델링을 위한 형식으로, Unity와 같은 게임 엔진에서 직접적으로 사용하는 것은 일반적으로 지원하지 않습니다. 따라서 CityGML 데이터를 Unity에서 사용하기 위해 변환 작업이 필요합니다.
 
 - **CityGML 변환 툴 사용**<br>
@@ -52,31 +55,30 @@ CityGML 파일을 파싱하고 Unity의 GameObject로 변환하는 자체 스크
 
 이번 문서에선 CityGML 변환 툴 중 하나인 PLATEAU SDK를 사용합니다.
 
-## Using Plateau Model in Unity
-### 작업 환경
+## 📚Using Plateau Model in Unity
+### 📓작업 환경
 - MacOS
 - Unity Editor Version 6000.0.5f1 Silicon
 - Universal RP 17.0.3
-- Plateau SDK for Unity 2.3.2 [(Releases](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity/releases))<br>
+- Plateau SDK for Unity 2.3.2 [(Releases](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity/releases))
 
-### Install Plateau SDK for Unity
+### 📓Install Plateau SDK for Unity
 다운로드한 Plateau SDK for Unity 2.3.2를 압축 해제하여 Project/Packages 경로에 넣어주고, Package Manager에서 로컬에서 Plateau SDK for Unity 2.3.2의 package.json을 찾아줍니다.
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/13c29472-4194-478c-ba9b-01656d1111d6)<br>
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/01279e29-8eeb-4228-b28a-e07aa55ec94a)<br>
 
-### Plateau 3D모델 다운로드(로컬 데이터를 사용하는 경우)
+### 📓Plateau 3D모델 다운로드(로컬 데이터를 사용하는 경우)
 [3D都市モデル(Project PLATEAU)ポータルサイト](https://www.geospatial.jp/ckan/dataset/plateau)에서 불러올 도시를 선택합니다.<br>
-- 다양한 포맷을 지원하지만 Unity에 직접 Import할 수 있는 FBX형식 모델을 다운로드합니다.<br>
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/9ff0fd3a-1440-4a92-b7c2-155a5a0f20c5)<br>
-  위 사진처럼 특정 도시의 최신 데이터는 FBX는 제공하지 않아 PLATEAU SDK를 사용하여 변환하는 작업이 별도로 필요할 수 있습니다. 따라서 CityGML형식을 다운로드하여 [Plateau SDK Installation](https://project-plateau.github.io/PLATEAU-SDK-for-Unity/manual/Installation.html)절차를 진행한 뒤 FBX로 변환합니다.<br>
-  - PLATEAU SDK는 v2 이상을 지원합니다.<br>
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/1ade4593-89aa-43db-8f4a-11e1757181dd)<br>
-- 만약 도심 내부의 특정 지역만을 다운로드 하고 싶다면 지역 메쉬 코드(위도, 경도)의 범위 다이어그램을 확인하고 해당 번호의 FBX형식으로 파일을 다운로드합니다.<br>
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/b2df5e16-6dd4-47c5-8f82-7db4a54e8293)<br>
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/69dc45bd-c74b-4596-9120-e0ca7c571e30)<br>
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/424f1d0d-c6ed-4836-98d4-ce8eb4259129)<br>
+다양한 포맷을 지원하지만 Unity에 직접 Import할 수 있는 FBX형식 모델을 다운로드합니다.<br>
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/9ff0fd3a-1440-4a92-b7c2-155a5a0f20c5)<br>
+위 사진처럼 특정 도시의 최신 데이터는 FBX는 제공하지 않아 PLATEAU SDK를 사용하여 변환하는 작업이 별도로 필요할 수 있습니다. 따라서 CityGML형식을 다운로드하여 [Plateau SDK Installation](https://project-plateau.github.io/PLATEAU-SDK-for-Unity/manual/Installation.html)절차를 진행한 뒤 FBX로 변환합니다. 참고로 PLATEAU SDK는 v2 이상을 지원합니다.<br>
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/1ade4593-89aa-43db-8f4a-11e1757181dd)<br>
+만약 도심 내부의 특정 지역만을 다운로드 하고 싶다면 지역 메쉬 코드(위도, 경도)의 범위 다이어그램을 확인하고 해당 번호의 FBX형식으로 파일을 다운로드합니다.<br>
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/b2df5e16-6dd4-47c5-8f82-7db4a54e8293)<br>
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/69dc45bd-c74b-4596-9120-e0ca7c571e30)<br>
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/424f1d0d-c6ed-4836-98d4-ce8eb4259129)<br>
 
-### Unity에 3D 모델링 임포트하기
+## 📚Unity에 3D 모델링 임포트하기
 > [!WARNING]
 > **Only MacOS Issue**
 > 1. Unity 상단 탭에서 PLATEAU SDK Open시 MacOS에서 악성 소프트웨어 문구가 나올 경우
@@ -86,7 +88,7 @@ CityGML 파일을 파싱하고 Unity의 GameObject로 변환하는 자체 스크
 > 4. 정상 동작 확인
 >    ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/d3ccc35b-2a81-49e4-a3d1-7b090c043125)<br>
 
-#### 로컬에서 가져오기
+### 📓로컬에서 가져오기
 다운로드한 FBX를 Assets의 임의의 루트에 넣고 Scene으로 넣어줍니다. 가져온 모델을 장면으로 드래그하면 환경에 따라 텍스처가 가져오지 않을 수 있습니다. 그 때는 메쉬 애셋의 Materials 탭에서 Extract Textures 버튼을 눌러 원하는 폴더에 텍스처를 내보냅니다. 그러면 자동으로 메쉬에 텍스처가 붙여집니다.
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/5a111555-9ff0-40de-9534-32dbbf8db2fe)<br>
 
@@ -94,7 +96,7 @@ CityGML 파일을 파싱하고 Unity의 GameObject로 변환하는 자체 스크
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/628bbe1c-60c6-4318-9b26-25c0cb29dd28)<br>
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/76c0e8de-43ba-4b51-bfc6-883658d70afb)<br>
 
-#### 서버에서 가져오기
+### 서버에서 가져오기
 1. Unity 상단 탭에서 PLATEAU SDK Open
 2. インポート元에서 サーバー(서버)로 선택
 3. データセットの選択(데이터 설정 선택)의 都道府県(도도부현)에서 추가할 지역 선택
@@ -127,7 +129,7 @@ CityGML 파일을 파싱하고 Unity의 GameObject로 변환하는 자체 스크
 11. 다운로드가 끝나면 Game, Scene View에서 결과 값을 확인합니다.
   ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/7f448667-2eca-4b8d-8bb2-59ed913b7a7b)<br>
 
-## Reference
+## 📚Reference
 - [jhorikawa_err - Using Plateau Model in Unity - UnityにPlateauモデルを持っていこう](https://qiita.com/jhorikawa_err/items/a8562b5d38bb6ae3edea)
 - [PLATEAU SDK for Unity Manual](https://project-plateau.github.io/PLATEAU-SDK-for-Unity/index.html)
 - [PLATEAU SDK for Unityとは](https://www.mlit.go.jp/plateau/learning/tpc17-1/#p17_1)
