@@ -11,7 +11,7 @@ PLATEAU SDK는 일본의 3D 도시 모델 플랫폼인 PLATEAU의 데이터를 U
 ![image](https://github.com/user-attachments/assets/63c98677-33a5-4dcc-a57e-3f7de2a18d36)
 
 
-### 📓Plateau SDK Sample Proejcts
+### 📓Plateau SDK Sample Projects
 - 2024년 GIS 샘플 : 도시 정보를 보여주는 샘플입니다.
 
 [2024년 GIS 샘플 보러 가기](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity-GISSample)
