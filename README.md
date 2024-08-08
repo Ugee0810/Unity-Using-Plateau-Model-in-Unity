@@ -1,3 +1,6 @@
+- [ENG ver](https://medium.com/@olgaphila40/how-to-develop-realistic-japanese-city-games-using-plateau-sdk-for-unity-a-comprehensive-guide-to-faa5df020758)
+- [JPN ver](https://note.com/ugee/n/nca2ee851b4ee)
+
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/56688021-69f7-4de3-81d4-d92ea551de01)<br>
 
 ## 📚What is Plateau SDK for Unity ?
