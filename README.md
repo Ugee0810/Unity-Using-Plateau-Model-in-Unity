@@ -1,16 +1,26 @@
-## 📚What is Plateau SDK for Unity ?
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/56688021-69f7-4de3-81d4-d92ea551de01)<br>
 
+## 📚What is Plateau SDK for Unity ?
 PLATEAU SDK는 일본의 3D 도시 모델 플랫폼인 PLATEAU의 데이터를 Unity 환경에서 사용할 수 있게 해주는 도구입니다. 이를 통해 개발자들은 현실감 있는 3D 도시 모델을 활용한 다양한 애플리케이션과 게임을 쉽게 제작할 수 있습니다.
 
-[Plateau SDK 사용 사례](https://www.mlit.go.jp/plateau/use-case/)
+### 📓Plateau SDK 사용 사례
+전국 각지에서 실제로 진행되고 있는 3D 도시 모델을 활용한 솔루션 개발의 사례를 소개합니다.
+
+[Plateau SDK 사용 사례 보러 가기](https://www.mlit.go.jp/plateau/use-case/)
+
+![image](https://github.com/user-attachments/assets/63c98677-33a5-4dcc-a57e-3f7de2a18d36)
+
 
 ### 📓Plateau SDK Sample Proejcts
-- [2024년 GIS 샘플](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity-GISSample) : 도시 정보를 보여주는 샘플입니다.
+- 2024년 GIS 샘플 : 도시 정보를 보여주는 샘플입니다.
+
+[2024년 GIS 샘플 보러 가기](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity-GISSample)
 
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/bccf57dc-a524-4871-9c71-0fab2d66f7f7)
 
-- [2024년 게임 샘플](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity-GameSample) : 도시를 무대로 이동하는 게임 샘플입니다.
+- 2024년 게임 샘플 : 도시를 무대로 이동하는 게임 샘플입니다.
+
+[2024년 게임 샘플 보러 가기](https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity-GameSample)
 
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/9823ddce-4671-416f-9d57-c3a540e2cf9d)
 
@@ -88,46 +98,57 @@ CityGML 파일을 파싱하고 Unity의 GameObject로 변환하는 자체 스크
 > 4. 정상 동작 확인
 >    ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/d3ccc35b-2a81-49e4-a3d1-7b090c043125)<br>
 
-### 📓로컬에서 가져오기
+### 📓A. 로컬에서 가져오기
 다운로드한 FBX를 Assets의 임의의 루트에 넣고 Scene으로 넣어줍니다. 가져온 모델을 장면으로 드래그하면 환경에 따라 텍스처가 가져오지 않을 수 있습니다. 그 때는 메쉬 애셋의 Materials 탭에서 Extract Textures 버튼을 눌러 원하는 폴더에 텍스처를 내보냅니다. 그러면 자동으로 메쉬에 텍스처가 붙여집니다.
+
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/5a111555-9ff0-40de-9534-32dbbf8db2fe)<br>
 
 가져온 모델을 장면으로 드래그하면 환경에 따라 텍스처가 가져오지 않을 수 있습니다. 그 때는 메쉬 애셋의 Materials 탭에서 Extract Textures 버튼을 눌러 원하는 폴더에 텍스처를 내보냅니다. 그러면 자동으로 메쉬에 텍스처가 붙여집니다.
+
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/628bbe1c-60c6-4318-9b26-25c0cb29dd28)<br>
 ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/76c0e8de-43ba-4b51-bfc6-883658d70afb)<br>
 
-### 서버에서 가져오기
-1. Unity 상단 탭에서 PLATEAU SDK Open
-2. インポート元에서 サーバー(서버)로 선택
-3. データセットの選択(데이터 설정 선택)의 都道府県(도도부현)에서 추가할 지역 선택
-4. データセット(데이터 설정)에서 해당 지역 도시 선택
-5. 基本座標系(기본좌표계)를 4번의 데이터 설정과 가까운 곳으로 설정
-6. 範囲選択(범위 선택)으로 결정
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/2b348105-21c1-4e62-bb27-7c4f067a9f8d)<br>
-7. Scene View로 이동
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/6f6ecbc8-ea49-4386-b427-dccec5c3f4ca)<br>
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/7664f5d0-71cf-4664-8977-f1b1614cd0fd)<br>
-  - 전부 선택 해제
-  - 결정
-  - 메쉬 코드 검색
-  - 취소(다시 5번 절차로)
-8. 추가할 범위 지정 후 결정
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/cc4a3703-bf25-4a76-9a8f-df6bf05ba900)<br>
-9. 결정하면 PLATEAU SDK 탭에서 地物別設定(지형별 설정)이 열리게 됩니다. 여기서 중요한 설정만 우선 설명합니다.
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/d9896ec6-6907-4913-8073-fcfd8f2627a8)<br>
-  一般設定(일반 설정)
-  - テクスチャを含める(텍스처 포함 여부)
-  - テクスチャを結合する(텍스처 결합 여부)
-  - Mesh Colliderをセットする(메쉬 콜라이더 설정 여부)
-  - モデル結合(모델링 결합)
-    - 최소 지형 단위(벽면)
-    - 주요 지형 단위(건축물, 도로 등)
-    - 지역 단위
-  - 属性情報を含める(속성 정보 포함)
-10. 모든 설정이 끝나면 モデルをインポートする(모델링 임포트하기) 선택하고 다운로드 진행
-    ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/52960a90-f42e-47b8-b977-06c51d22743b)<br>
-11. 다운로드가 끝나면 Game, Scene View에서 결과 값을 확인합니다.
-  ![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/7f448667-2eca-4b8d-8bb2-59ed913b7a7b)<br>
+### 📓B. 서버에서 가져오기
+Unity 상단 탭에서 PLATEAU SDK를 열어줍니다. 그리고 インポート元에서 サーバー(서버)로 선택합니다.
+
+データセットの選択(데이터 설정 선택)의 都道府県(도도부현)에서 추가할 지역을 선택하고 データセット(데이터 설정)에서 해당 지역 도시 선택합니다. 이후 아래 쪽에 위치한 基本座標系(기본좌표계)를 4번의 데이터 설정과 가까운 곳으로 설정합니다.
+
+範囲選択(범위 선택)으로 결정하고 Scene View로 이동합니다.
+
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/2b348105-21c1-4e62-bb27-7c4f067a9f8d)<br>
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/6f6ecbc8-ea49-4386-b427-dccec5c3f4ca)<br>
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/7664f5d0-71cf-4664-8977-f1b1614cd0fd)<br>
+[범위 선택 콤보 박스]
+- 전부 선택 해제
+- 결정
+- 메쉬 코드 검색
+- 취소(다시 PLATEAU SDK 탭으로)
+
+이동 했다면 추가할 범위 지정 후 결정합니다.
+
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/cc4a3703-bf25-4a76-9a8f-df6bf05ba900)<br>
+
+결정하면 PLATEAU SDK 탭에서 地物別設定(지형별 설정)이 열리게 됩니다. 여기서 중요한 설정만 우선 설명합니다.
+
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/d9896ec6-6907-4913-8073-fcfd8f2627a8)<br>
+
+一般設定(일반 설정)
+- テクスチャを含める(텍스처 포함 여부)
+- テクスチャを結合する(텍스처 결합 여부)
+- Mesh Colliderをセットする(메쉬 콜라이더 설정 여부)
+- モデル結合(모델링 결합)
+  - 최소 지형 단위(벽면)
+  - 주요 지형 단위(건축물, 도로 등)
+  - 지역 단위
+- 属性情報を含める(속성 정보 포함)
+
+모든 설정이 끝나면 モデルをインポートする(모델링 임포트하기) 선택하고 다운로드 진행
+
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/52960a90-f42e-47b8-b977-06c51d22743b)<br>
+
+다운로드가 끝나면 Game, Scene View에서 결과 값을 확인합니다.
+
+![image](https://github.com/Ugee0810/Unity-Using-Plateau-Model-in-Unity/assets/85896566/7f448667-2eca-4b8d-8bb2-59ed913b7a7b)<br>
 
 ## 📚Reference
 - [jhorikawa_err - Using Plateau Model in Unity - UnityにPlateauモデルを持っていこう](https://qiita.com/jhorikawa_err/items/a8562b5d38bb6ae3edea)
